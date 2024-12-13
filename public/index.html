@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="CriptX - Messaggistica Sicura e Privata" />
+    
+    <style>
+      :root {
+        --app-height: 100%;
+      }
+      
+      @supports (-webkit-touch-callout: none) {
+        :root {
+          --app-height: -webkit-fill-available;
+        }
+      }
+      
+      body {
+        min-height: var(--app-height);
+        overscroll-behavior-y: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      #root {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-content {
+        flex: 1;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <title>CriptX</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Previeni solo il comportamento di pull-to-refresh
+      document.body.addEventListener('touchmove', function(e) {
+        if (window.pageYOffset === 0 && e.touches[0].pageY > 0) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+    </script>
+  </body>
+</html>

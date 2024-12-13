@@ -1,0 +1,16 @@
+[
+  {
+    "origin": ["http://localhost:3000", "https://criptax-8d87d.web.app", "https://criptax-8d87d.firebaseapp.com"],
+    "method": ["GET", "HEAD", "PUT", "POST", "DELETE"],
+    "maxAgeSeconds": 3600,
+    "responseHeader": [
+      "Content-Type",
+      "Access-Control-Allow-Origin",
+      "Content-Length",
+      "Accept-Ranges",
+      "Range",
+      "Content-Range",
+      "Content-Encoding"
+    ]
+  }
+]

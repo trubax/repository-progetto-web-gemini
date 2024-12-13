@@ -1,0 +1,27 @@
+{
+  "name": "CriptX",
+  "short_name": "CriptX",
+  "description": "Messaggistica sicura e privata",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "categories": ["social", "communication"],
+  "shortcuts": [
+    {
+      "name": "Nuova chat",
+      "url": "/chat/new",
+      "icons": [{ "src": "/icons/new-chat.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/chat.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "Chat principale"
+    }
+  ]
+}
